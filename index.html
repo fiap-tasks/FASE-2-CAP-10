@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" name="Guilherme Mazur, Marcone Ribeiro, Marina Pereira">
+    <title>Primeiro Nome</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let name = prompt("Digite seu nome completo");
+    if(prompt){
+        if(name != ''){
+            let nameVector = name.split('');
+
+            let firstIndexGap = nameVector.indexOf(' ');
+            
+            let getFirstName = nameVector.splice(0, firstIndexGap);
+
+            let firstName = getFirstName.join('');
+
+            alert(firstName + ' obrigado por acessar nosso site!');
+        }
+        else{
+            alert('Você não digitou nada no campo!');
+        }
+    }
+</script>
+</html>
