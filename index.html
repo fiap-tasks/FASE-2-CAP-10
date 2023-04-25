@@ -11,22 +11,15 @@
     
 </body>
 <script>
-    let name = prompt("Digite seu nome completo");
-    if(prompt){
-        if(name != ''){
-            let nameVector = name.split('');
+    let name = prompt("Digite seu nome completo").trim()
+    if(name){
+        const allNames = name.split(' ')
+        const firstName = allNames[0]
 
-            let firstIndexGap = nameVector.indexOf(' ');
-            
-            let getFirstName = nameVector.splice(0, firstIndexGap);
-
-            let firstName = getFirstName.join('');
-
-            alert(firstName + ' obrigado por acessar nosso site!');
-        }
-        else{
-            alert('Você não digitou nada no campo!');
-        }
+        alert(firstName + ', obrigado por acessar nosso site!');
+    }
+    else{
+        alert('Você não digitou nada no campo!');
     }
 </script>
 </html>
